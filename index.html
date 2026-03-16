@@ -257,6 +257,47 @@
             filter: brightness(0) invert(1);
         }
 
+        .brand-logo-text {
+            font-weight: 800;
+            font-size: 2rem;
+            color: var(--white);
+            text-align: center;
+            letter-spacing: 2px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .logo-lucky {
+            font-size: 1.5rem;
+            display: block;
+        }
+
+        .logo-number {
+            font-size: 3.5rem;
+            color: #FF4444;
+            display: block;
+            line-height: 1;
+        }
+
+        .logo-vegan {
+            font-size: 2.2rem;
+            display: block;
+        }
+
+        .logo-rgd {
+            font-size: 3rem;
+            display: block;
+            color: #FF4444;
+        }
+
+        .logo-rgd-sub {
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
         .brand-content {
             padding: 2.5rem;
         }
@@ -645,7 +686,9 @@
         <div class="brands-grid">
             <div class="brand-card">
                 <div class="brand-logo-container">
-                    <img src="https://www.lucky13sandwich.com/images/logo.png" alt="Lucky 13 Logo" class="brand-logo">
+                    <div class="brand-logo-text">
+                        <span class="logo-lucky">LUCKY</span><span class="logo-number">13</span>
+                    </div>
                 </div>
                 <div class="brand-content">
                     <h3>Lucky 13</h3>
@@ -657,7 +700,9 @@
 
             <div class="brand-card">
                 <div class="brand-logo-container">
-                    <img src="https://www.thevegantablephuket.com/images/logo.png" alt="Vegan Table Logo" class="brand-logo">
+                    <div class="brand-logo-text">
+                        <span class="logo-vegan">🌱 VEGAN TABLE</span>
+                    </div>
                 </div>
                 <div class="brand-content">
                     <h3>Vegan Table</h3>
@@ -669,7 +714,9 @@
 
             <div class="brand-card">
                 <div class="brand-logo-container">
-                    <img src="https://www.reallygoodfoodgroup.com/images/logo.png" alt="Really Good Deli Logo" class="brand-logo">
+                    <div class="brand-logo-text">
+                        <span class="logo-rgd">RGD</span><br/><span class="logo-rgd-sub">Really Good</span>
+                    </div>
                 </div>
                 <div class="brand-content">
                     <h3>Really Good Deli</h3>
