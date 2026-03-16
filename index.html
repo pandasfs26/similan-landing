@@ -115,7 +115,25 @@
             content: '';
             position: absolute;
             inset: 0;
-            background: linear-gradient(135deg, #1a5f5f 0%, #0d7d7d 50%, #2a9f9f 100%);
+            background: linear-gradient(180deg, #1a4d5f 0%, #0d6d7d 30%, #0f8a99 50%, #1fa8b3 75%, #7dd3d0 100%),
+                        linear-gradient(135deg, rgba(26, 79, 95, 0.7) 0%, rgba(13, 125, 125, 0.5) 100%);
+            background-size: 100% 100%, 100% 100%;
+            background-position: 0 0, 100% 100%;
+            z-index: 0;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 200px;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 200"><path d="M0,100 Q150,60 300,80 T600,70 T900,85 T1200,75 L1200,200 L0,200 Z" fill="%23054a56" opacity="0.4"/><path d="M0,120 Q200,80 400,100 T800,90 T1200,110 L1200,200 L0,200 Z" fill="%23076b77" opacity="0.3"/></svg>') repeat-x;
+            background-size: 600px 200px;
+            background-position: 0 bottom;
             z-index: 0;
         }
 
