@@ -1,0 +1,889 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Similan Digital Agency - AI-powered content, strategy, and community management for Thai brands">
+    <title>Similan Digital Agency | AI-Powered Growth for Thai Brands</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --teal-dark: #0A3A3A;
+            --teal-light: #0D5A5A;
+            --teal-lighter: #1a8a99;
+            --ocean-deep: #0a4a5c;
+            --sand: #f5d5a3;
+            --coral: #FF6B5B;
+            --coral-dark: #E55A4A;
+            --light-bg: #F7FAFB;
+            --white: #FFFFFF;
+            --dark-text: #1A1A1A;
+            --gray-text: #666666;
+            --gray-light: #E8E8E8;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
+            line-height: 1.6;
+            color: var(--dark-text);
+            background: var(--light-bg);
+            overflow-x: hidden;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1.5rem 2rem;
+            background: var(--white);
+            box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .logo-link {
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+        }
+
+        .logo-svg {
+            width: 40px;
+            height: 40px;
+        }
+
+        .logo-text {
+            font-size: 1.3rem;
+            font-weight: 700;
+            color: var(--teal-dark);
+            letter-spacing: -0.5px;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 2.5rem;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: var(--gray-text);
+            font-weight: 500;
+            transition: color 0.3s ease;
+            position: relative;
+        }
+
+        nav a:hover {
+            color: var(--coral);
+        }
+
+        nav a::after {
+            content: '';
+            position: absolute;
+            bottom: -4px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--coral);
+            transition: width 0.3s ease;
+        }
+
+        nav a:hover::after {
+            width: 100%;
+        }
+
+        .hero {
+            position: relative;
+            height: 90vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: var(--white);
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(180deg, #1a4d5f 0%, #0d6d7d 20%, #0f8a99 40%, #1fa8b3 60%, #2eb8c1 80%, #87d4d0 100%);
+            z-index: 0;
+        }
+
+        /* Similan Islands SVG Background */
+        .hero::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 40%;
+            background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1400 500" preserveAspectRatio="none"><defs><linearGradient id="waterGrad" x1="0%25" y1="0%25" x2="0%25" y2="100%25"><stop offset="0%25" style="stop-color:%230F8A99;stop-opacity:1" /><stop offset="100%25" style="stop-color:%23054a56;stop-opacity:1" /></linearGradient></defs><rect width="1400" height="500" fill="url(%23waterGrad)"/><g id="islands"><path d="M 150 280 Q 180 200 210 280 L 210 500 L 150 500 Z" fill="%23076b77" opacity="0.9"/><path d="M 200 260 L 250 140 L 280 260 L 280 500 L 200 500 Z" fill="%23054a56"/><path d="M 320 300 Q 350 180 380 300 L 380 500 L 320 500 Z" fill="%230d5a5a" opacity="0.95"/><path d="M 450 320 L 510 160 L 560 320 L 560 500 L 450 500 Z" fill="%23076b77"/><path d="M 650 300 Q 680 200 710 300 L 710 500 L 650 500 Z" fill="%230d5a5a" opacity="0.9"/><path d="M 780 280 L 830 150 L 880 280 L 880 500 L 780 500 Z" fill="%23054a56"/><path d="M 1000 310 Q 1030 190 1060 310 L 1060 500 L 1000 500 Z" fill="%230d6d7d" opacity="0.92"/><path d="M 1150 290 L 1210 140 L 1260 290 L 1260 500 L 1150 500 Z" fill="%23076b77"/></g><g id="waves" opacity="0.6"><path d="M 0 350 Q 175 320 350 350 T 700 350 T 1050 350 T 1400 350 L 1400 380 Q 1225 410 1050 380 T 700 380 T 350 380 T 0 380 Z" fill="%23ffffff" opacity="0.15"/><path d="M 0 420 Q 200 390 400 420 T 800 420 T 1200 420 T 1400 420 L 1400 460 Q 1200 490 1000 460 T 600 460 T 200 460 T 0 460 Z" fill="%23ffffff" opacity="0.1"/></g></svg>') bottom/cover no-repeat;
+            z-index: 1;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            max-width: 800px;
+            padding: 0 2rem;
+            animation: fadeInUp 1s ease-out;
+        }
+
+        .hero h1 {
+            font-size: clamp(2.5rem, 6vw, 4.5rem);
+            margin-bottom: 1.5rem;
+            line-height: 1.1;
+            font-weight: 800;
+            letter-spacing: -1px;
+            text-shadow: 0 2px 10px rgba(0,0,0,0.3);
+        }
+
+        .hero .tagline {
+            font-size: 1.3rem;
+            margin-bottom: 1.5rem;
+            opacity: 0.98;
+            font-weight: 400;
+            text-shadow: 0 1px 4px rgba(0,0,0,0.2);
+        }
+
+        .hero p {
+            font-size: 1.1rem;
+            margin-bottom: 2.5rem;
+            opacity: 0.95;
+            line-height: 1.8;
+            text-shadow: 0 1px 4px rgba(0,0,0,0.2);
+        }
+
+        .cta-buttons {
+            display: flex;
+            gap: 1.5rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            padding: 1.1rem 2.5rem;
+            border: none;
+            border-radius: 10px;
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: inline-block;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+
+        .btn-primary {
+            background: var(--coral);
+            color: var(--white);
+        }
+
+        .btn-primary:hover {
+            background: var(--coral-dark);
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px rgba(255,107,91,0.3);
+        }
+
+        .btn-secondary {
+            background: var(--white);
+            color: var(--teal-dark);
+            border: 2px solid var(--white);
+        }
+
+        .btn-secondary:hover {
+            background: transparent;
+            color: var(--white);
+            transform: translateY(-3px);
+        }
+
+        section {
+            padding: 5rem 2rem;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        h2 {
+            font-size: clamp(2rem, 5vw, 3.2rem);
+            margin-bottom: 1rem;
+            text-align: center;
+            color: var(--teal-dark);
+            font-weight: 800;
+        }
+
+        .section-subtitle {
+            text-align: center;
+            color: var(--gray-text);
+            font-size: 1.1rem;
+            margin-bottom: 4rem;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .brands-section {
+            background: var(--white);
+        }
+
+        .brands-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 3rem;
+            margin-top: 3rem;
+        }
+
+        .brand-card {
+            background: var(--white);
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+            transition: all 0.4s ease;
+            border: 1px solid var(--gray-light);
+        }
+
+        .brand-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 12px 35px rgba(0,0,0,0.15);
+        }
+
+        .brand-logo-container {
+            height: 180px;
+            background: linear-gradient(135deg, var(--teal-dark) 0%, var(--teal-light) 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 2rem;
+        }
+
+        .brand-logo {
+            max-width: 100%;
+            max-height: 140px;
+            object-fit: contain;
+            filter: brightness(0) invert(1);
+        }
+
+        .brand-logo-text {
+            font-weight: 800;
+            font-size: 2rem;
+            color: var(--white);
+            text-align: center;
+            letter-spacing: 2px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .logo-lucky {
+            font-size: 1.5rem;
+            display: block;
+        }
+
+        .logo-number {
+            font-size: 3.5rem;
+            color: #FF4444;
+            display: block;
+            line-height: 1;
+        }
+
+        .logo-vegan {
+            font-size: 2.2rem;
+            display: block;
+        }
+
+        .logo-rgd {
+            font-size: 3rem;
+            display: block;
+            color: #FF4444;
+        }
+
+        .logo-rgd-sub {
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .brand-content {
+            padding: 2.5rem;
+        }
+
+        .brand-content h3 {
+            font-size: 1.5rem;
+            color: var(--teal-dark);
+            margin-bottom: 0.5rem;
+            font-weight: 700;
+        }
+
+        .brand-subtitle {
+            color: var(--coral);
+            font-size: 0.9rem;
+            font-weight: 600;
+            margin-bottom: 1.5rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .brand-content p {
+            color: var(--gray-text);
+            margin-bottom: 1.5rem;
+            line-height: 1.8;
+            font-size: 0.95rem;
+        }
+
+        .launch-badge {
+            display: inline-block;
+            background: linear-gradient(135deg, var(--coral) 0%, var(--coral-dark) 100%);
+            color: var(--white);
+            padding: 0.8rem 1.5rem;
+            border-radius: 50px;
+            font-weight: 600;
+            font-size: 0.85rem;
+        }
+
+        .bots-section {
+            background: linear-gradient(180deg, var(--light-bg) 0%, var(--white) 100%);
+        }
+
+        .bot-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2.5rem;
+            margin-top: 3rem;
+        }
+
+        .bot-card {
+            background: var(--white);
+            padding: 2.5rem;
+            border-radius: 14px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.06);
+            text-align: center;
+            transition: all 0.4s ease;
+            border: 1px solid var(--gray-light);
+            position: relative;
+        }
+
+        .bot-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(90deg, var(--teal-dark), var(--coral));
+            border-radius: 14px 14px 0 0;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .bot-card:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 12px 30px rgba(0,0,0,0.12);
+        }
+
+        .bot-card:hover::before {
+            opacity: 1;
+        }
+
+        .bot-icon {
+            font-size: 3.5rem;
+            margin-bottom: 1.5rem;
+            display: inline-block;
+        }
+
+        .bot-card h3 {
+            color: var(--teal-dark);
+            margin-bottom: 0.75rem;
+            font-size: 1.2rem;
+            font-weight: 700;
+        }
+
+        .bot-card p {
+            color: var(--gray-text);
+            font-size: 0.95rem;
+            line-height: 1.7;
+        }
+
+        .why-section {
+            background: var(--white);
+        }
+
+        .differentiators {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 3rem;
+            margin-top: 3rem;
+        }
+
+        .diff-item {
+            text-align: center;
+            padding: 2rem;
+            background: var(--light-bg);
+            border-radius: 12px;
+            transition: all 0.4s ease;
+            border: 1px solid var(--gray-light);
+        }
+
+        .diff-item:hover {
+            background: var(--white);
+            border-color: var(--coral);
+            box-shadow: 0 8px 20px rgba(255,107,91,0.1);
+        }
+
+        .diff-icon {
+            font-size: 3.5rem;
+            margin-bottom: 1.5rem;
+            display: inline-block;
+        }
+
+        .diff-item h3 {
+            color: var(--teal-dark);
+            margin-bottom: 1rem;
+            font-size: 1.3rem;
+            font-weight: 700;
+        }
+
+        .diff-item p {
+            color: var(--gray-text);
+            line-height: 1.8;
+            font-size: 0.95rem;
+        }
+
+        .contact-section {
+            background: linear-gradient(135deg, var(--teal-dark) 0%, var(--teal-light) 100%);
+            color: var(--white);
+        }
+
+        .contact-section h2 {
+            color: var(--white);
+        }
+
+        .contact-form {
+            background: var(--white);
+            border-radius: 16px;
+            padding: 3.5rem;
+            max-width: 600px;
+            margin: 3rem auto 0;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.2);
+        }
+
+        .form-group {
+            margin-bottom: 2rem;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 0.75rem;
+            color: var(--teal-dark);
+            font-weight: 600;
+            font-size: 0.95rem;
+        }
+
+        input, textarea {
+            width: 100%;
+            padding: 1rem;
+            border: 1.5px solid var(--gray-light);
+            border-radius: 8px;
+            font-family: inherit;
+            font-size: 1rem;
+            transition: all 0.3s ease;
+            color: var(--dark-text);
+        }
+
+        input::placeholder, textarea::placeholder {
+            color: #aaa;
+        }
+
+        input:focus, textarea:focus {
+            outline: none;
+            border-color: var(--coral);
+            box-shadow: 0 0 0 3px rgba(255,107,91,0.1);
+        }
+
+        textarea {
+            resize: vertical;
+            min-height: 140px;
+        }
+
+        .contact-form .btn {
+            width: 100%;
+            margin-top: 1rem;
+        }
+
+        footer {
+            background: var(--teal-dark);
+            color: var(--white);
+            padding: 3rem 2rem;
+            text-align: center;
+        }
+
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-bottom: 2rem;
+            text-align: left;
+        }
+
+        .footer-section h4 {
+            margin-bottom: 1rem;
+            font-weight: 700;
+        }
+
+        .footer-section ul {
+            list-style: none;
+        }
+
+        .footer-section a {
+            color: rgba(255,255,255,0.7);
+            text-decoration: none;
+            transition: color 0.3s ease;
+            display: block;
+            margin-bottom: 0.5rem;
+            font-size: 0.9rem;
+        }
+
+        .footer-section a:hover {
+            color: var(--coral);
+        }
+
+        .footer-bottom {
+            border-top: 1px solid rgba(255,255,255,0.1);
+            padding-top: 2rem;
+            text-align: center;
+        }
+
+        .footer-bottom p {
+            margin: 0.5rem 0;
+            font-size: 0.9rem;
+            opacity: 0.9;
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @media (max-width: 768px) {
+            nav {
+                padding: 1rem 1.5rem;
+            }
+
+            nav ul {
+                gap: 1.5rem;
+                font-size: 0.9rem;
+            }
+
+            .hero h1 {
+                font-size: 2rem;
+            }
+
+            .hero p {
+                font-size: 1rem;
+            }
+
+            .cta-buttons {
+                flex-direction: column;
+            }
+
+            .btn {
+                width: 100%;
+            }
+
+            section {
+                padding: 3rem 1.5rem;
+            }
+
+            h2 {
+                font-size: 2rem;
+            }
+
+            .brands-grid, .bot-grid, .differentiators {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+
+            .contact-form {
+                padding: 2rem 1.5rem;
+            }
+
+            .footer-content {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+
+            .footer-section a {
+                display: inline;
+                margin: 0 0.5rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            nav {
+                flex-direction: column;
+                gap: 1rem;
+            }
+
+            nav ul {
+                flex-direction: column;
+                gap: 1rem;
+                text-align: center;
+            }
+
+            .hero {
+                height: 70vh;
+            }
+
+            .hero h1 {
+                font-size: 1.5rem;
+            }
+
+            .section-subtitle {
+                font-size: 0.95rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <a href="#home" class="logo-link">
+            <svg class="logo-svg" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                <polygon points="20,80 35,30 50,80" fill="#0A3A3A"/>
+                <polygon points="45,80 65,35 85,80" fill="#0D5A5A"/>
+                <polygon points="50,80 50,50 65,80" fill="#FF6B5B" opacity="0.8"/>
+                <path d="M 35 70 L 50 60 L 65 70" stroke="#FF6B5B" stroke-width="2" fill="none" stroke-linecap="round"/>
+                <circle cx="35" cy="70" r="2" fill="#FF6B5B"/>
+                <circle cx="50" cy="60" r="2" fill="#FF6B5B"/>
+                <circle cx="65" cy="70" r="2" fill="#FF6B5B"/>
+            </svg>
+            <span class="logo-text">SIMILAN</span>
+        </a>
+        <ul>
+            <li><a href="#brands">Brands</a></li>
+            <li><a href="#bots">Our Bots</a></li>
+            <li><a href="#why">Why Us</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <section class="hero" id="home">
+        <div class="hero-content">
+            <h1>Your Digital Team, 24/7</h1>
+            <p class="tagline">10 AI Bots. 3 Brands. Unstoppable Growth.</p>
+            <p>AI-powered content, strategy, and community management for Thai brands that move fast.</p>
+            <div class="cta-buttons">
+                <a href="#brands" class="btn btn-primary">See What We're Building</a>
+                <a href="#contact" class="btn btn-secondary">Get Started</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="brands" class="brands-section">
+        <h2>Brands We Power</h2>
+        <p class="section-subtitle">Three visionary Thai brands, powered by AI at scale.</p>
+        <div class="brands-grid">
+            <div class="brand-card">
+                <div class="brand-logo-container">
+                    <div class="brand-logo-text">
+                        <span class="logo-lucky">LUCKY</span><span class="logo-number">13</span>
+                    </div>
+                </div>
+                <div class="brand-content">
+                    <h3>Lucky 13</h3>
+                    <span class="brand-subtitle">5 Franchise Locations</span>
+                    <p>Fresh sandwiches made by your neighbors. Growing dine-in footfall across Thailand with community-first storytelling.</p>
+                    <span class="launch-badge">🚀 Live Now</span>
+                </div>
+            </div>
+
+            <div class="brand-card">
+                <div class="brand-logo-container">
+                    <div class="brand-logo-text">
+                        <span class="logo-vegan">🌱 VEGAN TABLE</span>
+                    </div>
+                </div>
+                <div class="brand-content">
+                    <h3>Vegan Table</h3>
+                    <span class="brand-subtitle">Award-Winning Hub</span>
+                    <p>10+ years of plant-based excellence. Repositioning as a wellness thought leader with values-driven, engaging content.</p>
+                    <span class="launch-badge">📅 April 6, 2026</span>
+                </div>
+            </div>
+
+            <div class="brand-card">
+                <div class="brand-logo-container">
+                    <div class="brand-logo-text">
+                        <span class="logo-rgd">RGD</span><br/><span class="logo-rgd-sub">Really Good</span>
+                    </div>
+                </div>
+                <div class="brand-content">
+                    <h3>Really Good Deli</h3>
+                    <span class="brand-subtitle">B2B + B2C</span>
+                    <p>10-year hotel supplier now going direct. LinkedIn thought leadership + consumer engagement = new growth.</p>
+                    <span class="launch-badge">📅 April 6, 2026</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="bots" class="bots-section">
+        <h2>The Bot Team</h2>
+        <p class="section-subtitle">10 specialized AI bots working in parallel. Always on. Always improving.</p>
+        <div class="bot-grid">
+            <div class="bot-card">
+                <div class="bot-icon">✍️</div>
+                <h3>Content Manager</h3>
+                <p>Social copy, captions, hashtags — perfectly on-brand, every single time.</p>
+            </div>
+            <div class="bot-card">
+                <div class="bot-icon">🎨</div>
+                <h3>Visual Designer</h3>
+                <p>Graphics, layouts, templates — 3 variations per brief, always brand-aligned.</p>
+            </div>
+            <div class="bot-card">
+                <div class="bot-icon">📊</div>
+                <h3>Paid Ads Bot</h3>
+                <p>Meta & Google campaigns — optimized for ROAS, constantly A/B testing.</p>
+            </div>
+            <div class="bot-card">
+                <div class="bot-icon">💬</div>
+                <h3>Community Manager</h3>
+                <p>Comments, DMs, engagement — 2-hour response time, always human-first.</p>
+            </div>
+            <div class="bot-card">
+                <div class="bot-icon">📈</div>
+                <h3>Analytics Bot</h3>
+                <p>Real-time KPIs, dashboards, weekly digests — data you can actually act on.</p>
+            </div>
+            <div class="bot-card">
+                <div class="bot-icon">📝</div>
+                <h3>Copywriter Bot</h3>
+                <p>Long-form emails, blogs, thought leadership — persuasive & authentic.</p>
+            </div>
+            <div class="bot-card">
+                <div class="bot-icon">🎬</div>
+                <h3>Video Editor Bot</h3>
+                <p>15–30s Reels & TikToks — hook in 0–3s, trending sounds, always fresh.</p>
+            </div>
+            <div class="bot-card">
+                <div class="bot-icon">🤝</div>
+                <h3>Influencer/Outreach</h3>
+                <p>Partnerships & collaborations — phase 3+, Dan-approved only.</p>
+            </div>
+            <div class="bot-card">
+                <div class="bot-icon">⚙️</div>
+                <h3>Project Manager Bot</h3>
+                <p>Workflow orchestration in Asana — daily status, escalate blockers fast.</p>
+            </div>
+            <div class="bot-card">
+                <div class="bot-icon">🔒</div>
+                <h3>Security & Compliance</h3>
+                <p>24/7 threat monitoring, 12-point checklist — protecting your brands.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="why" class="why-section">
+        <h2>Why Similan</h2>
+        <p class="section-subtitle">What sets us apart in a crowded digital landscape.</p>
+        <div class="differentiators">
+            <div class="diff-item">
+                <div class="diff-icon">🌍</div>
+                <h3>Local Genius</h3>
+                <p>AI that understands Thai culture, local trends, and what actually resonates. Not generic. Never generic.</p>
+            </div>
+            <div class="diff-item">
+                <div class="diff-icon">⚡</div>
+                <h3>Speed at Scale</h3>
+                <p>Content fast. Approvals faster. 10 bots working in parallel. Results delivered by morning.</p>
+            </div>
+            <div class="diff-item">
+                <div class="diff-icon">📊</div>
+                <h3>Proof in Metrics</h3>
+                <p>Real-time dashboards. Weekly digests. We measure everything — and optimize constantly.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="contact-section">
+        <h2>Let's Build Something Great</h2>
+        <div class="contact-form">
+            <form>
+                <div class="form-group">
+                    <label for="name">Your Name</label>
+                    <input type="text" id="name" name="name" placeholder="Who are we talking to?" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" placeholder="your@email.com" required>
+                </div>
+                <div class="form-group">
+                    <label for="brand">Brand / Project</label>
+                    <input type="text" id="brand" name="brand" placeholder="What are we building?">
+                </div>
+                <div class="form-group">
+                    <label for="message">Tell Us More</label>
+                    <textarea id="message" name="message" placeholder="Your vision. Your goals. Your timeline." required></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary">Send Message</button>
+            </form>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>Similan Digital</h4>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#brands">Brands</a></li>
+                    <li><a href="#bots">Our Bots</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Services</h4>
+                <ul>
+                    <li><a href="#bots">Content Strategy</a></li>
+                    <li><a href="#bots">Community Management</a></li>
+                    <li><a href="#bots">Paid Advertising</a></li>
+                    <li><a href="#bots">Analytics & Reporting</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Connect</h4>
+                <ul>
+                    <li><a href="mailto:hello@similandigital.com">Email Us</a></li>
+                    <li><a href="https://www.instagram.com/similandigital" target="_blank">Instagram</a></li>
+                    <li><a href="https://www.linkedin.com/company/similan-digital" target="_blank">LinkedIn</a></li>
+                    <li><a href="https://www.facebook.com/similandigital" target="_blank">Facebook</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Similan Digital Agency. Thailand-based. AI-powered. Human-focused.</p>
+            <p>Built for brands that move fast.</p>
+        </div>
+    </footer>
+</body>
+</html>
