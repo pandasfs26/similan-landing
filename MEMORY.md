@@ -65,6 +65,54 @@ For deep reference material, see `reference/` folder. For daily logs, see `memor
 
 ---
 
+## 5.2b Stitch 2.0 Integration (NEW — MAJOR STRATEGIC LEVER)
+
+**What:** Stitch 2.0 as design engine for full-stack digital agency offering
+
+**How it works:**
+1. Client intake → intake-stitch bot generates Stitch prompt (5 blueprints ready)
+2. Stitch 2.0 generates 3 UI directions (live in call, 20–30 min)
+3. prototype-review bot locks best design + exports Figma/React
+4. proposal-bot generates Loom walkthrough + pricing email
+5. dev-build-bot writes tickets + README for dev team
+6. Content/analytics bots handle post-launch growth + SEO
+
+**Revenue per client:**
+- Design only: $2–3K
+- Design + build: $8–10K
+- Design + build + 3mo marketing: $15–20K
+
+**Target scale (June 30):**
+- 3–5 clients closed × $8–15K average = $20–50K/mo revenue
+- Pitch-to-mockup time: <24h (vs competitors' 2–4 weeks)
+- Design lock: <48h
+- Build timeline: 2–3 weeks
+
+**5 Production Blueprints (ready to use):**
+1. High-end restaurant/bar (Lucky 13 style)
+2. Cafe/brunch (Vegan Table style)
+3. Local service B2B (Really Good Deli style)
+4. Kitchen Safety app (tablet, offline-first)
+5. Personal brand/expert (consultant style)
+
+**New bots to create:**
+- intake-stitch (collect brief → generate Stitch prompt)
+- prototype-review (review 3 designs, lock, export)
+- dev-build-bot (hand off to dev, write tickets + docs)
+
+**Tomorrow (March 18) actions:**
+1. Confirm Stitch 2.0 API access
+2. Confirm subscriptions: Gemini Pro ($20/mo), Claude Pro ($20/mo)
+3. Run first live Stitch demo with real client brief
+4. Test intake-stitch bot workflow
+5. Lock first design + propose pricing
+
+**Docs ready (Git commit 60dc149):**
+- STITCH_PROMPT_BLUEPRINTS.md (5 production-ready copy-paste prompts)
+- STITCH_BOT_INTEGRATION.md (workflow, bot specs, implementation roadmap)
+
+---
+
 ## 5.3 Active Projects
 
 ### Project: SIMILAN DIGITAL AGENCY (Primary)
