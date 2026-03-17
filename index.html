@@ -782,9 +782,8 @@
     <section id="contact" class="contact-section">
         <h2>Let's Build Something Great</h2>
         <div class="contact-form">
-            <form action="https://formspree.io/f/mdawpknz" method="POST">
+            <form id="contact-form" action="https://formspree.io/f/mdawpknz" method="POST">
                 <input type="hidden" name="_subject" value="New Similan Agency Inquiry">
-                <input type="hidden" name="_next" value="https://similan-landing.vercel.app/thank-you.html">
                 <div class="form-group">
                     <label for="name">Your Name</label>
                     <input type="text" id="name" name="name" placeholder="Who are we talking to?" required>
@@ -803,6 +802,31 @@
                 </div>
                 <button type="submit" class="btn btn-primary">Send Message</button>
             </form>
+
+            <script>
+                document.getElementById('contact-form').addEventListener('submit', function(e) {
+                    e.preventDefault();
+                    
+                    // Collect form data
+                    const formData = new FormData(this);
+                    
+                    // Send to Formspree
+                    fetch('https://formspree.io/f/mdawpknz', {
+                        method: 'POST',
+                        body: formData,
+                        headers: {
+                            'Accept': 'application/json'
+                        }
+                    }).then(response => {
+                        if (response.ok) {
+                            // Redirect to thank you page
+                            window.location.href = '/thank-you.html';
+                        }
+                    }).catch(error => {
+                        console.error('Error:', error);
+                    });
+                });
+            </script>
         </div>
     </section>
 
