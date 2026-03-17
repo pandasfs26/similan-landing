@@ -15,6 +15,9 @@
         :root {
             --teal-dark: #0A3A3A;
             --teal-light: #0D5A5A;
+            --teal-lighter: #1a8a99;
+            --ocean-deep: #0a4a5c;
+            --sand: #f5d5a3;
             --coral: #FF6B5B;
             --coral-dark: #E55A4A;
             --light-bg: #F7FAFB;
@@ -115,31 +118,25 @@
             content: '';
             position: absolute;
             inset: 0;
-            background: linear-gradient(180deg, #1a4d5f 0%, #0d6d7d 30%, #0f8a99 50%, #1fa8b3 75%, #7dd3d0 100%),
-                        linear-gradient(135deg, rgba(26, 79, 95, 0.7) 0%, rgba(13, 125, 125, 0.5) 100%);
-            background-size: 100% 100%, 100% 100%;
-            background-position: 0 0, 100% 100%;
+            background: linear-gradient(180deg, #1a4d5f 0%, #0d6d7d 20%, #0f8a99 40%, #1fa8b3 60%, #2eb8c1 80%, #87d4d0 100%);
             z-index: 0;
-            position: relative;
-            overflow: hidden;
         }
 
+        /* Similan Islands SVG Background */
         .hero::after {
             content: '';
             position: absolute;
             bottom: 0;
             left: 0;
             right: 0;
-            height: 200px;
-            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 200"><path d="M0,100 Q150,60 300,80 T600,70 T900,85 T1200,75 L1200,200 L0,200 Z" fill="%23054a56" opacity="0.4"/><path d="M0,120 Q200,80 400,100 T800,90 T1200,110 L1200,200 L0,200 Z" fill="%23076b77" opacity="0.3"/></svg>') repeat-x;
-            background-size: 600px 200px;
-            background-position: 0 bottom;
-            z-index: 0;
+            height: 40%;
+            background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1400 500" preserveAspectRatio="none"><defs><linearGradient id="waterGrad" x1="0%25" y1="0%25" x2="0%25" y2="100%25"><stop offset="0%25" style="stop-color:%230F8A99;stop-opacity:1" /><stop offset="100%25" style="stop-color:%23054a56;stop-opacity:1" /></linearGradient></defs><rect width="1400" height="500" fill="url(%23waterGrad)"/><g id="islands"><path d="M 150 280 Q 180 200 210 280 L 210 500 L 150 500 Z" fill="%23076b77" opacity="0.9"/><path d="M 200 260 L 250 140 L 280 260 L 280 500 L 200 500 Z" fill="%23054a56"/><path d="M 320 300 Q 350 180 380 300 L 380 500 L 320 500 Z" fill="%230d5a5a" opacity="0.95"/><path d="M 450 320 L 510 160 L 560 320 L 560 500 L 450 500 Z" fill="%23076b77"/><path d="M 650 300 Q 680 200 710 300 L 710 500 L 650 500 Z" fill="%230d5a5a" opacity="0.9"/><path d="M 780 280 L 830 150 L 880 280 L 880 500 L 780 500 Z" fill="%23054a56"/><path d="M 1000 310 Q 1030 190 1060 310 L 1060 500 L 1000 500 Z" fill="%230d6d7d" opacity="0.92"/><path d="M 1150 290 L 1210 140 L 1260 290 L 1260 500 L 1150 500 Z" fill="%23076b77"/></g><g id="waves" opacity="0.6"><path d="M 0 350 Q 175 320 350 350 T 700 350 T 1050 350 T 1400 350 L 1400 380 Q 1225 410 1050 380 T 700 380 T 350 380 T 0 380 Z" fill="%23ffffff" opacity="0.15"/><path d="M 0 420 Q 200 390 400 420 T 800 420 T 1200 420 T 1400 420 L 1400 460 Q 1200 490 1000 460 T 600 460 T 200 460 T 0 460 Z" fill="%23ffffff" opacity="0.1"/></g></svg>') bottom/cover no-repeat;
+            z-index: 1;
         }
 
         .hero-content {
             position: relative;
-            z-index: 1;
+            z-index: 2;
             max-width: 800px;
             padding: 0 2rem;
             animation: fadeInUp 1s ease-out;
@@ -151,20 +148,23 @@
             line-height: 1.1;
             font-weight: 800;
             letter-spacing: -1px;
+            text-shadow: 0 2px 10px rgba(0,0,0,0.3);
         }
 
         .hero .tagline {
             font-size: 1.3rem;
             margin-bottom: 1.5rem;
-            opacity: 0.95;
+            opacity: 0.98;
             font-weight: 400;
+            text-shadow: 0 1px 4px rgba(0,0,0,0.2);
         }
 
         .hero p {
             font-size: 1.1rem;
             margin-bottom: 2.5rem;
-            opacity: 0.9;
+            opacity: 0.95;
             line-height: 1.8;
+            text-shadow: 0 1px 4px rgba(0,0,0,0.2);
         }
 
         .cta-buttons {
