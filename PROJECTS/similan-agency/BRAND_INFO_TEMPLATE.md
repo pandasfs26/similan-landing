@@ -7,18 +7,18 @@ Fill this out for each brand using info from your brand books. Hex codes can be 
 ## LUCKY 13 — BRAND INFO
 
 **Colors:**
-- Primary (main brand color): 
-- Secondary 1:
-- Secondary 2:
-- Accent:
-- Neutral/Gray:
+- Primary (main brand color): #ED2124
+- Secondary 1:#FFFFFF
+- Secondary 2:#00000
+- Accent:#FFB3A7
+- Neutral/Gray:#FFFFF
 
 **Fonts:**
-- Headline font name:
-- Body font name:
+- Headline font name:BEBAS NEUE
+- Body font name:MONTSERRAT MEDIUM
 
 **Logo:**
-- Logo file location/name:
+- Logo file location/name:PROJECTS/similan-agency/MASTER_ASSETS/BRAND_LOGOS/lucky13/logo.png
 
 **Notes:**
 (Any other info from brand book)
@@ -28,18 +28,18 @@ Fill this out for each brand using info from your brand books. Hex codes can be 
 ## VEGAN TABLE — BRAND INFO
 
 **Colors:**
-- Primary (main brand color): 
-- Secondary 1:
+- Primary (main brand color): #2D694A
+- Secondary 1:#68B527
 - Secondary 2:
-- Accent:
-- Neutral/Gray:
+- Accent:#DE3888
+- Neutral/Gray:#F7FCE3
 
 **Fonts:**
-- Headline font name:
-- Body font name:
+- Headline font name:AREMIC
+- Body font name:Helvetica Bold
 
 **Logo:**
-- Logo file location/name:
+- Logo file location/name:PROJECTS/similan-agency/MASTER_ASSETS/BRAND_LOGOS/vegan-table/logo.png
 
 **Notes:**
 (Any other info from brand book)
@@ -49,18 +49,18 @@ Fill this out for each brand using info from your brand books. Hex codes can be 
 ## REALLY GOOD DELI — BRAND INFO
 
 **Colors:**
-- Primary (main brand color): 
-- Secondary 1:
-- Secondary 2:
-- Accent:
-- Neutral/Gray:
+- Primary (main brand color):#BD1E2E 
+- Secondary 1:#EF4037
+- Secondary 2:#ED6426
+- Accent:#FFBD59
+- Neutral/Gray:#FEE2CF
 
 **Fonts:**
-- Headline font name:
-- Body font name:
+- Headline font name:SINK
+- Body font name:Open sauce Medium 
 
 **Logo:**
-- Logo file location/name:
+- Logo file location/name:PROJECTS/similan-agency/MASTER_ASSETS/BRAND_LOGOS/rgd/logo.png
 
 **Notes:**
 (Any other info from brand book)
