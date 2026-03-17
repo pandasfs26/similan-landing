@@ -1,0 +1,40 @@
+# Credentials — NEVER commit
+CREDENTIALS/.env
+.env
+.env.local
+.env.*.local
+
+# System files
+.DS_Store
+.AppleDouble
+.LSOverride
+*.swp
+*.swo
+*~
+.vscode/
+.idea/
+
+# Logs
+*.log
+logs/
+npm-debug.log*
+
+# Node modules (if needed)
+node_modules/
+package-lock.json
+
+# Bot output artifacts (can regenerate)
+PROJECTS/*/BOTS/*/logs/*.log
+
+# OS
+Thumbs.db
+desktop.ini
+
+# Temp files
+*.tmp
+*.temp
+.cache/
+
+# Do NOT ignore (whitelist)
+!.gitkeep
+!CREDENTIALS/.env.example
