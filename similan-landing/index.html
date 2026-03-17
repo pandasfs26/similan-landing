@@ -803,12 +803,18 @@
                 <button type="submit" class="btn btn-primary">Send Message</button>
             </form>
 
+            <div id="success-message" style="display: none; text-align: center; padding: 2rem; background: rgba(47, 207, 118, 0.1); border-radius: 10px; border: 2px solid #2FCF76; color: #2FCF76;">
+                <h3 style="font-size: 1.5rem; margin-bottom: 0.5rem;">✓ Thank You!</h3>
+                <p style="font-size: 1.1rem;">Your message has been received. One of our team will respond within 24 hours.</p>
+            </div>
+
             <script>
                 document.getElementById('contact-form').addEventListener('submit', function(e) {
                     e.preventDefault();
                     
                     // Collect form data
                     const formData = new FormData(this);
+                    const form = this;
                     
                     // Send to Formspree
                     fetch('https://formspree.io/f/mdawpknz', {
@@ -819,8 +825,9 @@
                         }
                     }).then(response => {
                         if (response.ok) {
-                            // Redirect to thank you page
-                            window.location.href = '/thank-you.html';
+                            // Hide form, show success message
+                            form.style.display = 'none';
+                            document.getElementById('success-message').style.display = 'block';
                         }
                     }).catch(error => {
                         console.error('Error:', error);
