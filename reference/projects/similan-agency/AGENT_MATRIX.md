@@ -12,12 +12,26 @@
 | **cm-similan** | Community Manager | Similan | FB, IG, TikTok | workspaces/similan/community-manager/ | http, file, social-api-similan | Security → Dan → Post | 🟢 PROD |
 | **content-similan** | Content Generator | Similan | FB, IG, TikTok | workspaces/similan/content/ | http, file, templates | Draft only | 🟢 PROD |
 | **analytics-similan** | Analytics & Reporting | Similan | All | workspaces/similan/analytics/ | http, file, spreadsheets | Report only | 🟢 PROD |
+| **vd-similan** | Visual Designer | Similan | All | workspaces/similan/visual-designer/ | http, file, canva-api-similan | Security → Dan → Post | 🟢 CRITICAL |
+| **pa-similan** | Paid Ads | Similan | Meta, Google | workspaces/similan/paid-ads/ | http, file, meta-api, google-ads-api | Security → Dan → Launch | 🟢 CRITICAL |
+| **cw-similan** | Copywriter | Similan | All | workspaces/similan/copywriter/ | http, file, templates | Security → Dan → Post | 🟡 EXEC |
+| **ve-similan** | Video Editor | Similan | TikTok, Reels | workspaces/similan/video-editor/ | http, file, video-processing | Security → Dan → Post | 🟡 EXEC |
 | **cm-brand2** | Community Manager | Brand 2 | FB, IG, TikTok | workspaces/brand2/community-manager/ | http, file, social-api-brand2 | Security → Dan → Post | 🟡 STAGING |
 | **content-brand2** | Content Generator | Brand 2 | FB, IG, TikTok | workspaces/brand2/content/ | http, file, templates | Draft only | 🟡 STAGING |
 | **analytics-brand2** | Analytics & Reporting | Brand 2 | All | workspaces/brand2/analytics/ | http, file, spreadsheets | Report only | 🟡 STAGING |
+| **vd-brand2** | Visual Designer | Brand 2 | All | workspaces/brand2/visual-designer/ | http, file, canva-api-brand2 | Security → Dan → Post | 🟡 STAGING |
+| **pa-brand2** | Paid Ads | Brand 2 | Meta, Google | workspaces/brand2/paid-ads/ | http, file, meta-api, google-ads-api | Security → Dan → Launch | 🟡 STAGING |
+| **cw-brand2** | Copywriter | Brand 2 | All | workspaces/brand2/copywriter/ | http, file, templates | Security → Dan → Post | 🟡 STAGING |
+| **ve-brand2** | Video Editor | Brand 2 | TikTok, Reels | workspaces/brand2/video-editor/ | http, file, video-processing | Security → Dan → Post | 🟡 STAGING |
 | **cm-brand3** | Community Manager | Brand 3 | FB, IG, TikTok | workspaces/brand3/community-manager/ | http, file, social-api-brand3 | Security → Dan → Post | 🟡 STAGING |
 | **content-brand3** | Content Generator | Brand 3 | FB, IG, TikTok | workspaces/brand3/content/ | http, file, templates | Draft only | 🟡 STAGING |
 | **analytics-brand3** | Analytics & Reporting | Brand 3 | All | workspaces/brand3/analytics/ | http, file, spreadsheets | Report only | 🟡 STAGING |
+| **vd-brand3** | Visual Designer | Brand 3 | All | workspaces/brand3/visual-designer/ | http, file, canva-api-brand3 | Security → Dan → Post | 🟡 STAGING |
+| **pa-brand3** | Paid Ads | Brand 3 | Meta, Google | workspaces/brand3/paid-ads/ | http, file, meta-api, google-ads-api | Security → Dan → Launch | 🟡 STAGING |
+| **cw-brand3** | Copywriter | Brand 3 | All | workspaces/brand3/copywriter/ | http, file, templates | Security → Dan → Post | 🟡 STAGING |
+| **ve-brand3** | Video Editor | Brand 3 | TikTok, Reels | workspaces/brand3/video-editor/ | http, file, video-processing | Security → Dan → Post | 🟡 STAGING |
+| **pm-shared** | Project Manager | All | Internal | workspaces/shared/project-manager/ | http, file, asana-api | N/A (orchestrator) | 🟡 SUPPORT |
+| **inf-shared** | Influencer | All | All | workspaces/shared/influencer/ | http, file, outreach-templates | Dan approval (no outreach) | 🟡 SUPPORT |
 
 ---
 
@@ -370,10 +384,10 @@ Anomalies trigger Telegram alert to Dan
 
 | Phase | Date | Bots | Status |
 |-------|------|------|--------|
-| **Phase 1** | March 17 | Setup workspaces + docs | 🟢 DONE |
-| **Phase 2** | March 27 | Agent Matrix finalized + tested | ⏳ THIS WEEK |
-| **Phase 3** | April 1 | 3 critical-path bots (Security, CM, Content) | ⏳ PRE-LAUNCH TEST |
-| **Phase 4** | April 6 | All 10 bots LIVE (Similan, Brand 2, Brand 3) | ⏳ LAUNCH |
+| **Phase 1** | March 17 | Setup 16 workspaces + all docs | 🟢 DONE |
+| **Phase 2** | March 27 | Gateway lockdown + credentials | ⏳ THIS WEEK |
+| **Phase 3** | April 1 | 4 critical-path bots tested (Security, CM, Content, Visual Designer, Paid Ads) | ⏳ PRE-LAUNCH TEST |
+| **Phase 4** | April 6 | All 16 bots LIVE (Similan, Brand 2, Brand 3, Shared) | ⏳ LAUNCH |
 
 ---
 
