@@ -244,6 +244,27 @@ Create folders for organization:
 
 ---
 
+## BRAND DIGITAL PRESENCE
+
+### **LUCKY 13**
+- Website: www.lucky13sandwich.com
+- Instagram: @lucky13sandwich
+- Facebook: /lucky13sandwich
+- TikTok: @lucky.13.sandwich
+
+### **VEGAN TABLE**
+- Website: www.thevegantablephuket.com
+- Instagram: @thevegantable.co
+- Facebook: /thevegantable.co
+- TikTok: @thevegantable
+
+### **REALLY GOOD DELI**
+- Website: www.reallygoodfoodgroup.com
+- Instagram: @reallygooddeli
+- Facebook: /really.good.deli
+- TikTok: @reallygooddeli
+
+---
 ## NAMING CONVENTION
 
 Save all templates with this format:
