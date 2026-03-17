@@ -164,6 +164,18 @@
 - Built foundation (prompts + competitor audit)
 - Ready to build content calendars next
 
+**March 17, 2026 Session (7:30 AM):**
+- **Fixed Telegram routing:** Changed `dmScope` from `per-channel-peer` to `main` in openclaw.json
+  - Problem: Messages from Dan were going to isolated bot sessions, not main session
+  - Solution: Gateway restarted, now Dan's Telegram messages route directly to Panda
+- **Upgraded landing page:** Added real Similan Islands SVG background
+  - Programmatic island silhouettes with water + wave effects
+  - Maintains text logos (Lucky 13, Vegan Table, Really Good Deli) — can swap with real assets later
+  - Deployed to Vercel (commit: 2726085)
+- **Permissions verified:** Workspace file permissions locked down correctly (sensitive files 600, shareable files 644)
+- **Instance status:** OpenClaw running for 24h continuously; all infrastructure stable
+- **Next priority:** Real brand logos + custom landing page imagery (when Dan provides assets)
+
 ---
 
 **This memory file is your continuity. Update it after each major session.**
